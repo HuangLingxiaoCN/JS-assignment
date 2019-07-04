@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2>This is an url protocol finder.</h2>
+  <form>
+    URL:<input type="text" size="50" id="url"><br>
+    <input type="button" value="Click me" onclick="profinder()">
+  </form>
+  <p id="protocol"></p>
+
+  <script>
+    function profinder() {
+      let protocol = document.getElementById("url").value;
+      if(protocol.slice(0,5) === "https")
+        document.getElementById("protocol").innerHTML = "Protocol is https";
+      else if(protocol.slice(0,4) === "http")
+        document.getElementById("protocol").innerHTML = "Protocol is http";
+      else
+        document.getElementById("protocol").innerHTML = "This is not a valid url!";
+    }
+  </script>
+</body>
+</html>

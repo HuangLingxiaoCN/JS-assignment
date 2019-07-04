@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS program</title>
+</head>
+<body>
+
+  <h2>Program checking if given email address contains "@"</h2>
+ 
+  <form id="form">
+    <input type="text" name="email" size="50" id="email">
+    <br>
+    <input type="button" value="sumbit" onclick="check()">
+  </form>
+
+  
+  <h2 id="result"></h2>
+  <script>
+    function check(){
+      let arr = document.getElementById("email").value;
+      let n = 0;
+      let flag = 0;
+      while(n < arr.length){
+        console.log(arr[n]);
+        if(arr[n] == "@") flag = 1;
+        n++;
+      }
+      
+      if(flag)  document.getElementById("result").innerHTML = ("Your email address is valid!");
+      else  document.getElementById("result").innerHTML = ("Please enter valid email address!");
+
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>BMI</title>
+</head>
+<body>
+  <h1>BMI Calculator</h1>
+
+  <form name="form">
+    Height:<br>
+    <input type="number" size="10" name="height">cm<br>
+    Weight:<br>
+    <input type="number" size="10" name="weight">kg<br>
+    BMI:<br>
+    <input type="number" size="10" name="bmi"><br>
+
+    <input type="button" value="calculate" onclick="BMI()"><br>
+    <input type="reset" value="clear">
+
+  </form>
+
+  <p id="p"></p>
+  <script>
+    function BMI(){
+      let a,b,c,d;
+      a = form.height.value;
+      b = form.weight.value;
+      a = a/100;
+      c = b/(a*a);
+      d = Math.round(c*10)/10;
+      form.bmi.value = d;
+    }
+  </script>
+
+</body>
+</html>
